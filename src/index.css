@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mySwiper{
+    width: 100%;
+    border-radius: 20px;
+}

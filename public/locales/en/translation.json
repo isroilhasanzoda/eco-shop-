@@ -1,0 +1,10 @@
+{
+  "ly": {
+    "title": "Basket",
+    "text.btn": "Catalog",
+    "text.favorite": "Favourites"
+  },
+  "tx": {
+    "text.btn": "Basket"
+  }
+}
