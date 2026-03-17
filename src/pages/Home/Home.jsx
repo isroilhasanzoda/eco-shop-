@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React from 'react'
 import { useOutletContext } from 'react-router';
-
 import Button from '../../components/Button/Button';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,10 +17,7 @@ const api = " http://localhost:3000/data";
 
 const Home = () => {
 
-  
-  
-  const { darkMode, tx, addCart, data, getData } = useOutletContext();
-  
+  const { darkMode, tx, addCart, data, getData, category } = useOutletContext();
    
   async function checkCard(elem) {
     try {
@@ -36,7 +32,6 @@ const Home = () => {
     }
   }
   
-
   return (
     <div
       className={`flex flex-col px-20 pb-22 py-18    ${darkMode ? "bg-black text-white" : "bg-gray-200 text-black"}`}
@@ -87,8 +82,11 @@ const Home = () => {
         </Swiper>
       </div>
 
-      <div className="grid sm:pt-15 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-8 ">
+      <div className="grid  sm:pt-15 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-8 ">
         {data
+          .filter((e) => {
+          return category === "All" ? true : e.name === category
+        })
           .filter((e) => {
             return e.name
               .trim()
@@ -99,15 +97,21 @@ const Home = () => {
             return (
               <div key={e.id}>
                 <div
-                  className={` relative px-7 py-7 rounded-2xl ${darkMode ? "bg-[#1E2024] text-white" : "bg-gray-100 text-black"} `}
+                  className={`shadow-2xl relative px-7 py-7 rounded-2xl ${darkMode ? "bg-[#1E2024] text-white" : "bg-gray-100 text-black"} `}
                 >
-                  <FavoriteBorderIcon sx={{position:"absolute", right:"11px", cursor:"pointer", color:e.complite ? "red": "black"}}  onClick={() => checkCard(e) } />
-
+                  <FavoriteBorderIcon
+                    sx={{
+                      position: "absolute",
+                      right: "11px",
+                      cursor: "pointer",
+                      color: e.complite ? "red" : "black",
+                    }}
+                    onClick={() => checkCard(e)}
+                  />
                   <img className="max-w-65 max-h-60 pb-2 " src={e.img} alt="" />
                   <h1>{e.price} c</h1>
                   <h1 className="text-lg font-extrabold">{e.name}</h1>
                   <h1 className="text-gray-500"> {e.color}</h1>
-
                   <Button onAdd={() => addCart(e)} />
                 </div>
               </div>

@@ -6,7 +6,7 @@
       "price": "229 ",
       "name": "Iphone",
       "color": "red",
-      "complite": true
+      "complite": false
     },
     {
       "id": "3",
@@ -18,7 +18,7 @@
     },
     {
       "img": "https://avatars.mds.yandex.net/i?id=c2db8d4798ce35b78f9a949e6f93372b0343cb39-11402455-images-thumbs&n=13",
-      "price": "1129 ",
+      "price": "929 ",
       "name": "Nokia",
       "color": "black",
       "complite": false,
@@ -27,7 +27,7 @@
     {
       "id": "8",
       "img": "https://avatars.mds.yandex.net/i?id=12b751817505d781d01dc549aee91fef3708888e-5210205-images-thumbs&n=13",
-      "price": "1129 ",
+      "price": "3119 ",
       "name": "Samsung",
       "color": "black",
       "complite": false
@@ -59,7 +59,7 @@
     {
       "id": "12",
       "img": "https://avatars.mds.yandex.net/i?id=8cc040ffb7d877349c312eb0d79c969d9c83835d-5145748-images-thumbs&n=13",
-      "price": "1129 ",
+      "price": "5929 ",
       "name": "Iphone",
       "color": "black",
       "complite": false
@@ -67,7 +67,7 @@
     {
       "id": "13",
       "img": "https://avatars.mds.yandex.net/i?id=9593faea573d9e54154a8348f4aeb88b32af23b3-3724606-images-thumbs&n=13",
-      "price": "1129 ",
+      "price": "9129 ",
       "name": "Samsung",
       "color": "black",
       "complite": false

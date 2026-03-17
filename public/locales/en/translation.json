@@ -6,5 +6,9 @@
   },
   "tx": {
     "text.btn": "Basket"
+  },
+  "pd": {
+    "text": "TOTAL :"
   }
+  
 }

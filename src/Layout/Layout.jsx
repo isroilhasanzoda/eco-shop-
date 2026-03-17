@@ -20,6 +20,8 @@ const api = " http://localhost:3000/data";
 
 const Layout = () => {
 
+  const [category, setCategory] = useState("All")
+
   const [data, setData] = useState([]);
 
   const [cart, setCart] = useState([])
@@ -155,7 +157,7 @@ const Layout = () => {
           </header>
 
           <main>
-            <Outlet context={{ darkMode, tx, cart, addCart, setCart, data, getData }} />
+            <Outlet context={{ darkMode, tx, cart, addCart, setCart, data, getData, category }} />
           </main>
 
           <footer
@@ -212,7 +214,8 @@ const Layout = () => {
           </footer>
           {modal ? (
             <div>
-              <ModalCard setModal={setModal} />
+              
+              <ModalCard setCategory={setCategory} setModal={setModal} data={data} />
             </div>
           ) : null}
         </>
